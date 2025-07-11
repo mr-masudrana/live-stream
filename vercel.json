@@ -2,7 +2,7 @@
   "rewrites": [
     {
       "source": "/playlist.m3u",
-      "destination": "/data/live_playlist.m3u"
+      "destination": "/api/playlist.m3u.js"
     }
   ]
 }
