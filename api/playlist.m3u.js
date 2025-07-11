@@ -17,7 +17,9 @@ export default function handler(req, res) {
 
 function generateToken() {
   const now = new Date();
-  const timestamp = `${now.getMonth() + 1}/${now.getDate()}/${now.getFullYear()} ${now.toLocaleTimeString('en-US')} PM`;
-  const raw = `server_time=${timestamp}&hash_value=i6KxNF...==&validminutes=40`;
-  return encodeURIComponent(Buffer.from(raw).toString("base64"));
+  const time = `${now.getMonth() + 1}/${now.getDate()}/${now.getFullYear()} ${now.toLocaleTimeString('en-US')} PM`;
+  const hash_value = "qJ3x4+lgLQEqZytYbLuw/A=="; // Jagobd থেকে পাওয়া hash
+  const raw = `server_time=${time}&hash_value=${hash_value}&validminutes=40`;
+  const base64 = Buffer.from(raw).toString("base64");
+  return encodeURIComponent(base64);
 }
