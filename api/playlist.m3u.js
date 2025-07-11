@@ -6,7 +6,7 @@ export default function handler(req, res) {
 
   for (const ch of channels) {
     const token = generateToken();
-    const full_url = `${base}/${ch.raw_url}/tracks-v1a1/mono.m3u8?wmsAuthSign=${token}`;
+    const full_url = `${base}/${ch.url}/tracks-v1a1/mono.m3u8?wmsAuthSign=${token}`;
     playlist.push(`#EXTINF:-1 tvg-id="${ch.id}" tvg-logo="${ch.logo}" group-title="${ch.group}",${ch.name}`);
     playlist.push(full_url);
   }
