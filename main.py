@@ -1,4 +1,4 @@
-import time
+import os
 from urllib.parse import quote
 from datetime import datetime
 import base64
@@ -9,6 +9,7 @@ def generate_token():
     return quote(base64.b64encode(token_string.encode()).decode())
 
 def generate_playlist():
+    os.makedirs("data", exist_ok=True)  # ✅ ফোল্ডার বানাবে যদি না থাকে
     token = generate_token()
     m3u8_url = f"https://statiics.ncare.live/.../tracks-v1a1/mono.m3u8?wmsAuthSign={token}"
     with open("data/live_playlist.m3u", "w") as f:
