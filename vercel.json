@@ -1,8 +1,6 @@
 {
   "rewrites": [
-    {
-      "source": "/playlist.m3u",
-      "destination": "/api/playlist.m3u.js"
-    }
+    { "source": "/", "destination": "/index.html" },
+    { "source": "/api/live", "destination": "/api/live.js" }
   ]
 }
