@@ -10,5 +10,11 @@ export const channels = [
     tvg_id: "Channel24",
     group: "News",
     raw_url: "channel24-sg-e8e.stream"
+  },
+  {
+    name: "Somoy TV",
+    tvg_id: "SomoyTV",
+    group: "News",
+    raw_url: "somoyt000011226615544544.stream"
   }
 ];
